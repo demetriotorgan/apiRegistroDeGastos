@@ -1,8 +1,9 @@
 const {Router} = require('express')
-const {saveRegistro} = require('../controlers/registroControlers')
+const {saveRegistro, getRegistros} = require('../controlers/registroControlers')
 
 const router = Router();
 
 router.post('/save', saveRegistro);
+router.get('/all', getRegistros);
 
 module.exports = router;
