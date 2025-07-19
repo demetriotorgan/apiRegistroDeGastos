@@ -22,3 +22,17 @@ module.exports.getRegistros = async(req,res) =>{
         res.status(500).json({erro: 'Erro ao buscar registros'})
     }
 };
+
+module.exports.deleteRegistro = async(req,res)=>{
+const {id} = req.params;
+try {
+    const deletado = await registroModel.findByIdAndDelete(id);
+        if(!deletado){
+            return res.status(404).json({erro:'Registro não encontrado'})
+        }
+    res.status(200).json({mensagem: 'Registro deltado com sucesso', registro:deletado})
+} catch (error) {
+    console.error('Erro ao deletar registro')    
+    res.status(500).json({erro:'Erro ao deletar registro'})
+}
+};
