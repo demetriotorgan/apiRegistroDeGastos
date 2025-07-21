@@ -22,7 +22,7 @@ gasto:{
 categoria:{
     type:String,
     require: true,
-    enum:['supermercado', 'bebidas', 'lanche', 'abastecimento', 'outro']
+    enum:['supermercado', 'bebidas', 'lanche', 'abastecimento', 'agua', 'luz', 'internet', 'outro']
 }
 })
 
