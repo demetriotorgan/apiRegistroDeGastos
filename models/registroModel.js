@@ -18,6 +18,11 @@ gasto:{
     type:String,
     require:true,
     enum:['essencial', 'nao-essencial']
+},
+categoria:{
+    type:String,
+    require: true,
+    enum:['supermercado', 'bebidas', 'lanche', 'abastecimento', 'outro']
 }
 })
 
